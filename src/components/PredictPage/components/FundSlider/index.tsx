@@ -2,9 +2,11 @@ import { sliderData } from "./consts.ts";
 import {
   Container,
   SliderInfo,
+  SliderLeft,
   SliderPicture,
   SliderPrize,
   SliderQuantity,
+  SliderRight,
   SliderTitle,
   SliderWrapper,
 } from "./styles.ts";
@@ -24,5 +26,11 @@ export const FundSlider = () => {
     </SliderWrapper>
   ));
 
-  return <Container>{sliders}</Container>;
+  return (
+    <Container>
+      {sliders}
+      <SliderLeft />
+      <SliderRight />
+    </Container>
+  );
 };

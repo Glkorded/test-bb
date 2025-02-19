@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { COLORS } from "@ui-kit/consts";
 import { ALPHA } from "@ui-kit/consts/alpha";
+import _SliderLeft from "./assets/sliderLeft.svg?react";
+import _SliderRight from "./assets/sliderRight.svg?react";
 
 export const Container = styled.div`
   display: flex;
@@ -8,6 +10,7 @@ export const Container = styled.div`
   flex-wrap: wrap;
   margin-bottom: 84px;
   justify-content: center;
+  position: relative;
 `;
 
 export const SliderWrapper = styled.div`
@@ -100,4 +103,24 @@ export const SliderPrize = styled.div`
   line-height: 40px;
   letter-spacing: 0;
   color: ${COLORS.WHITE};
+`;
+
+export const SliderLeft = styled(_SliderLeft)`
+  position: absolute;
+  top: calc(50% - 27px);
+  left: -27px;
+  z-index: 25;
+  height: 54px;
+  width: 54px;
+  cursor: pointer;
+`;
+
+export const SliderRight = styled(_SliderRight)`
+  position: absolute;
+  top: calc(50% - 27px);
+  right: -27px;
+  z-index: 25;
+  height: 54px;
+  width: 54px;
+  cursor: pointer;
 `;
